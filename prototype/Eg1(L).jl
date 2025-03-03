@@ -72,7 +72,7 @@ solvers = (
     )
 )
 
-runtime = set_runtime(iterations=2000, time_step=1, write_interval=2000)
+runtime = set_runtime(iterations=2000, time_step=1, write_interval=1)
 # runtime = set_runtime(iterations=1, time_step=1, write_interval=-1) # hide
 
 config = Configuration(
@@ -83,4 +83,3 @@ initialise!(model.momentum.p, 0.0)
 
 residuals = run!(model, config);
 
-Alert("Simulation Complete!")
