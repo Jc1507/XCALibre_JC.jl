@@ -1,12 +1,12 @@
 using XCALibre
-using CUDA
+# using CUDA
 
 # mesh_file = "examples/0_GRIDS/backwardFacingStep_5mm.unv"
 mesh_file = "prototype/TestMesh/JetImpingment5.unv"
 mesh = UNV2D_mesh(mesh_file, scale=0.001)
 
-mesh_dev = adapt(CUDABackend(), mesh)
-# mesh_dev = mesh
+# mesh_dev = adapt(CUDABackend(), mesh)
+mesh_dev = mesh
 
 d = 101.6e-3
 ReTarget = 70000
@@ -135,8 +135,8 @@ solvers = (
 runtime = set_runtime(iterations=10000, write_interval=5, time_step=0.00003)
 # runtime = set_runtime(iterations=2, write_interval=-1, time_step=1)
 
-hardware = set_hardware(backend=CUDABackend(), workgroup=32)
-# hardware = set_hardware(backend=CPU(), workgroup=4)
+# hardware = set_hardware(backend=CUDABackend(), workgroup=32)
+hardware = set_hardware(backend=CPU(), workgroup=4)
 
 config = Configuration(
     solvers=solvers, schemes=schemes, runtime=runtime, hardware=hardware)
