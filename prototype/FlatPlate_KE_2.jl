@@ -3,7 +3,7 @@ using Plots
 #mesh_file = "C:/Users/ocam1/Documents/CFD Stuff/FlatPlate2.unv"
 #mesh = UNV2D_mesh(mesh_file, scale=0.001)
 
-mesh_file = "C:/Users/ocam1/Documents/CFD Stuff/TurbulentPipeFlow.unv"
+mesh_file = "prototype/TestMesh/TurbulentPipeFlow.unv"
 mesh = UNV2D_mesh(mesh_file, scale=0.001)
 
 
