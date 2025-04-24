@@ -2,7 +2,7 @@ using XCALibre
 # using CUDA
 
 # mesh_file = "examples/0_GRIDS/backwardFacingStep_5mm.unv"
-mesh_file = "prototype/TestMesh/JetImpingment5.unv"
+mesh_file = "C:/Users/jcame/OneDrive/Desktop/UNV files/JetImpingment4.unv"
 mesh = UNV2D_mesh(mesh_file, scale=0.001)
 
 # mesh_dev = adapt(CUDABackend(), mesh)
